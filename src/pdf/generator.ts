@@ -179,7 +179,7 @@ function ensureContrast(textColor: Rgba, bg: Rgba): Rgba {
 
 function renderElement(pdf: any, el: IRElement): void {
   switch (el.type) {
-    case 'text':   return renderText(pdf, el)
+    case 'text':   renderText(pdf, el); break
     case 'image':  return renderImage(pdf, el)
     case 'shape':  return renderShape(pdf, el)
     case 'table':  return renderTable(pdf, el)
@@ -199,12 +199,13 @@ function renderText(
   el: TextElement,
   effectiveBg: Rgba = RGBA_WHITE
 ): number {
+  let result = el.y
   try {
-    return _renderTextInner(pdf, el, effectiveBg)
+    result = _renderTextInner(pdf, el, effectiveBg)
   } catch (e) {
     console.error('[pdfkit-client] renderText failed:', e, '\nRuns:', el.runs.length, 'at', el.x, el.y)
-    return el.y
   }
+  return result
 }
 
 function _renderTextInner(
@@ -336,6 +337,7 @@ function _renderTextInner(
   }
 
   pdf.setTextColor(0, 0, 0)
+  return cursorY
 }
 
 /**

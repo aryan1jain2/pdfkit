@@ -290,8 +290,8 @@ export function cellRefToIndex(ref: string): { col: number; row: number } {
   const match = ref.match(/^([A-Z]+)(\d+)$/)
   if (!match) return { col: 0, row: 0 }
 
-  const colStr = match[1]
-  const rowStr = match[2]
+  const colStr = match[1] ?? ''
+  const rowStr = match[2] ?? '1'
 
   let col = 0
   for (let i = 0; i < colStr.length; i++) {

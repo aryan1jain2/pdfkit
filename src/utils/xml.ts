@@ -55,7 +55,7 @@ export async function loadZip(
       },
 
       listFiles(): string[] {
-        return Object.keys(zip.files).filter(k => !zip.files[k].dir)
+        return Object.keys(zip.files).filter(k => !zip.files[k]?.dir)
       }
     }
   } catch (e) {
@@ -108,7 +108,7 @@ export function getEl(
   // getElementsByTagNameNS('*', ...) finds across all namespaces
   const results = (parent as Element).getElementsByTagNameNS?.('*', localName)
     ?? (parent as Document).getElementsByTagNameNS('*', localName)
-  return results.length > 0 ? results[0] : null
+  return results.length > 0 ? (results[0] ?? null) : null
 }
 
 /**

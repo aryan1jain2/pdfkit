@@ -61,7 +61,7 @@ export async function toPDF(
         ...doc,
         pages: opts.pages
           .filter(i => i >= 0 && i < doc.pages.length)
-          .map(i => doc.pages[i])
+          .map(i => doc.pages[i]!)
       }
     }
 

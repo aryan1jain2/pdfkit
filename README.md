@@ -2,7 +2,7 @@
 
 > Client-side `.pptx` and `.xlsx` → PDF conversion. No server. No uploads. Pure browser.
 
-[![npm version](https://badge.fury.io/js/pdfkit-client.svg)](https://badge.fury.io/js/pdfkit-client)
+[![npm version](https://badge.fury.io/js/%40ozh1n%2Fpdfkit.svg)](https://badge.fury.io/js/@ozh1n/pdfkit)
 
 ---
 
@@ -17,14 +17,14 @@ Every other solution either requires a server, sends your files to a third party
 ## Install
 
 ```bash
-npm install pdfkit-client
+npm install @ozh1n/pdfkit jszip jspdf
 ```
 
 Or via CDN:
 ```html
 <script src="https://unpkg.com/jszip/dist/jszip.min.js"></script>
 <script src="https://unpkg.com/jspdf/dist/jspdf.umd.min.js"></script>
-<script src="https://unpkg.com/pdfkit-client/dist/index.umd.js"></script>
+<script src="https://unpkg.com/@ozh1n/pdfkit/dist/index.umd.js"></script>
 ```
 
 ---
@@ -119,7 +119,7 @@ The IR is a format-neutral data model. This separation means:
 ## Contributing
 
 ```bash
-git clone https://github.com/you/pdfkit-client
+git clone https://github.com/aryan1jain2/pdfkit
 npm install
 npm run dev      # demo app at localhost:5173
 npm test         # unit tests

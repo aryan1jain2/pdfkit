@@ -2,7 +2,9 @@
 
 > Client-side `.pptx` and `.xlsx` → PDF conversion. No server. No uploads. Pure browser.
 
-[![npm version](https://badge.fury.io/js/%40ozh1n%2Fpdfkit.svg)](https://badge.fury.io/js/@ozh1n/pdfkit)
+[![npm version](https://img.shields.io/npm/v/@ozh1n/pdfkit)](https://www.npmjs.com/package/@ozh1n/pdfkit)
+
+**🔗 [Live demo](https://aryan1jain2.github.io/pdfkit/)** — drop a `.pptx` or `.xlsx` file and watch it convert to PDF in your browser.
 
 ---
 

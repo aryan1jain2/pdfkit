@@ -21,6 +21,7 @@
   "bugs":     "https://github.com/aryan1jain2/pdfkit/issues",
   "scripts": {
     "build":          "vite build",
+    "build:demo":     "vite build --config vite.demo.config.ts",
     "dev":            "vite",
     "test":           "vitest run",
     "test:watch":     "vitest",
